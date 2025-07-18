@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像アップロード</title>
+  <link rel="stylesheet" href="../jsp/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f2f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    header {
+      margin-top: 40px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #27ae60;
+    }
+
+    main {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin: 20px auto;
+    }
+
+    .buttonArea {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 25px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #219150;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>画像リスト 3</h1>
+  </header>
+
+  <main>
+    <form action="../upload" enctype="multipart/form-data" method="POST">
+      <label for="upfile">画像ファイルを選択</label>
+      <input type="file" name="upfile" id="upfile" accept="image/*">
+      <div class="buttonArea">
+        <button type="submit">📤 アップロード</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
